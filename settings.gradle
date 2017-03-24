@@ -1,0 +1,12 @@
+rootProject.name = 'inheritutil'
+include 'aliyun-oss'
+include 'SocketDemo'
+include 'SocketDemo:SocketClient'
+findProject(':SocketDemo:SocketClient')?.name = 'SocketClient'
+include 'SocketDemo:SocketService'
+findProject(':SocketDemo:SocketService')?.name = 'SocketService'
+include 'auto-modeling'
+include 'ddlib-nosql'
+include 'ddlib-nosql:ddlib-nosql-redis'
+findProject(':ddlib-nosql:ddlib-nosql-redis')?.name = 'ddlib-nosql-redis'
+
